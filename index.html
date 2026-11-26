@@ -8869,7 +8869,7 @@
     var key;
     fromPassword(document.getElementById('pw').value).then(function (k) { key = k; return decrypt(k); }).then(function (html) {
       crypto.subtle.exportKey('raw', key).then(function (raw) { try { sessionStorage.setItem(STORE, toB64(raw)); } catch (e) {} }).finally(function () { show(html); });
-    }).catch(function () { go.disabled = false; err.textContent = 'That password didn‚Äôt work. Try again.'; });
+    }).catch(function () { go.disabled = false; err.textContent = 'That password didn’t work. Try again.'; });
   });
 })();
 </script>
